@@ -32,6 +32,7 @@ streaming_df = spark.readStream \
 # Select specific columns from "data"
 df = streaming_df.select(to_json(struct("*")).alias("value"))
 
+
 # Convert the value column to string and display the result
 query = df.selectExpr("CAST(value AS STRING)") \
     .writeStream \

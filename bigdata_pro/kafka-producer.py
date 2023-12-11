@@ -24,7 +24,7 @@ class FileEventHandler(FileSystemEventHandler):
 # Watchdog observer to monitor the directory for file events
 observer = Observer()
 event_handler = FileEventHandler()
-directory_to_watch = r'C:\Users\Legion\Desktop\old_pro\bigdata_pro\data/'  # Replace with your directory path
+directory_to_watch = r'C:\\Users\\Legion\\Desktop\\old_pro\\bigdata_pro\\data'  # Replace with your directory path
 
 observer.schedule(event_handler, directory_to_watch)
 observer.start()
